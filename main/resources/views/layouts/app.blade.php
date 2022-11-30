@@ -10,6 +10,7 @@
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
 
+<<<<<<< Updated upstream
         <!-- Styles -->
         @livewireStyles
 
@@ -17,6 +18,19 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="font-sans antialiased">
+=======
+        <!-- Scripts -->
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+        <script src="{{ asset('js/app.js') }}" defer></script>
+        
+
+        <!-- Styles -->
+        @livewireStyles
+
+    </head>
+    <body class="font-sans antialiased">
+        
+>>>>>>> Stashed changes
         <x-jet-banner />
 
         <div class="min-h-screen bg-gray-100">
