@@ -17,12 +17,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified'
-])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
-});
+// homepage //
+Route::middleware(['auth:sanctum', config('jetstream.auth_session'),'verified'])->group(function () {Route::get('/dashboard', function () {return view('dashboard');})->name('dashboard');});
+
+// webshop page //
+Route::middleware(['auth:sanctum', config('jetstream.auth_session'),'verified'])->group(function () {Route::get('/webshop', function () {return view('webshop');})->name('webshop');});
+
+// request page //
+Route::middleware(['auth:sanctum', config('jetstream.auth_session'),'verified'])->group(function () {Route::get('/requestPage', function () {return view('requestPage');})->name('requestPage');});
